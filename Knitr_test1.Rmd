@@ -1,0 +1,20 @@
+---
+title: "Knit_test_1"
+output: html_document
+---
+
+## Set Global options
+
+```{r setOptions, echo=FALSE}
+opts_chunk$set(echo=FALSE, results="hide")
+```
+
+First simulate data
+```{r simulatedata, echo=TRUE}
+x<- rnorm(100); y<- x + rnorm(100, sd=.5)
+```
+
+Here's a scatter plot of the data
+```{r scatterplot, fig.height=4}
+par(mar= c (5,4,1,1), las =1)
+plot(x,y)
